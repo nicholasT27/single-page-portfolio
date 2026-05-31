@@ -41,7 +41,6 @@ main{
     display: flex;
     justify-content: center;
     margin: 80px 0;
-    border: black solid;
 }
 
 .title-details {
@@ -66,4 +65,50 @@ main{
     line-height: 1.5;
     letter-spacing: 0px;
     color: #6A6662;
+}
+
+.hero-description {
+    display: grid;
+    grid-template-columns: 354px 165px 165px 354px;
+    grid-template-rows: 182px 182px;
+    gap: 20px;
+}
+
+/* Graphic Design - tall left block, spans 2 rows and 1 column */
+.grid-1 {
+    grid-column: span 1;
+    grid-row: span 2;
+    background-color: #755CDE;
+}
+
+/* UI/UX - small top middle */
+.grid-2 {
+    grid-column: span 1;
+    grid-row: span 1;
+    background-color: #E9A282;
+}
+
+/* Apps - small top middle */
+.grid-3 {
+    grid-column: span 1;
+    grid-row: span 1;
+    background-color: #E88C98;
+}
+
+.grid-4 {
+  grid-column: 4 / 5;      /* place at column 4 */
+  grid-row: 1 / 2;         /* place at row 1 */
+  background-color: #59B7A3;
+}
+
+.grid-5 {
+  grid-column: 2 / 4;      /* spans column 2 and 3 */
+  grid-row: 2 / 3;         /* place at row 2 */
+  background-color: #C1614F;
+}
+
+.grid-6 {
+  grid-column: 4 / 5;      /* place at column 4 */
+  grid-row: 2 / 3;         /* place at row 2 */
+  background-color: #4A2B3D;
 }
