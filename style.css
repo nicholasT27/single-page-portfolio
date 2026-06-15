@@ -4,8 +4,6 @@
     padding: 0;
 }
 
-
-
 body {
     background-color: #FFF7F0;
     padding: 32px;
@@ -16,7 +14,7 @@ body {
     align-items: center;
 }
 
-.introduction-section{
+.introduction-section, footer, .reservation{
     max-width: 1110px;
     width: 100%;
 }
@@ -183,6 +181,7 @@ body {
     line-height: 1.5;
     letter-spacing: 0;
     border: none;
+    cursor: pointer;
 }
 
 .work-slider-section > h1 {
@@ -215,12 +214,10 @@ body {
     object-fit: cover;
     display: block;
     border-radius: 6px;
-    opacity: 0.4;
     transform: scale(0.93);
 }
 
 .slide.active img {
-    opacity: 1;
     transform: scale(1);
 }
 
@@ -278,3 +275,49 @@ body {
     object-fit: cover;
     color: #FFFFFF;
 }
+
+.reservation {
+    margin-top: 120px;
+    margin-bottom: 64px;
+    display: flex;
+    background-color: black;
+    height: 320px;
+    color: #FFF7F0;
+    padding: 80px 64px;
+    gap: 240px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.reservation-description {
+    max-width: 540px;
+}
+
+.reservation-description > h1 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.3;
+    letter-spacing: 0;
+}
+
+.reservation-description > p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    margin-top: 24px;
+}
+
+.reservation > button {
+    width: 234px;
+    height: 56px;
+    border-radius: 999px;
+    background-color: #E16B5B;
+    border: none;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0px;
+    color: #FFF7F0;
+    cursor: pointer;
+}
+
