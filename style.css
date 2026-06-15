@@ -24,7 +24,7 @@ body {
     justify-content: space-between;
 }
 
-.logo button {
+.logo > button {
     min-width: 234px;
     border: none;
     border-radius: 100px;
@@ -34,6 +34,19 @@ body {
     line-height: 1.5;
     letter-spacing: 0%;
     font-weight: 400;
+}
+
+.logo > button:hover {
+   background-color: #755CDE;
+   cursor: pointer;
+}
+
+.logo > button:active {
+    background-color: #030303;
+    outline: 2px solid #755CDE;
+    cursor: pointer;
+    outline-offset: 2px;
+    cursor: pointer;
 }
 
 .title {
@@ -181,6 +194,17 @@ body {
     line-height: 1.5;
     letter-spacing: 0;
     border: none;
+}
+
+.profile-introduction > button:hover {
+    background-color: #F6A560;
+    cursor: pointer;
+}
+
+.profile-introduction > button:active {
+    background-color: #E16B5B;
+    outline: 2px solid #E16B5B;
+    outline-offset: 2px;
     cursor: pointer;
 }
 
@@ -193,8 +217,11 @@ body {
     letter-spacing: 0px;
 }
 
+.work-slider-section {
+    margin-bottom: 10px;
+}
+
 .slider-wrapper {
-    overflow: hidden;
     width: 100vw;
 }
 
@@ -262,6 +289,18 @@ body {
     color: #FFFFFF;
 }
 
+#prevBtn:hover {
+    background-color: #755CDE;
+   cursor: pointer;
+}
+
+#prevBtn:active {
+    background-color: #030303;
+    outline: 2px solid #755CDE;
+    outline-offset: 2px;
+    cursor: pointer;
+}
+
 #nextBtn {
     background-color: #030303;
     border-radius: 50%;
@@ -274,6 +313,18 @@ body {
 #nextBtn > img{
     object-fit: cover;
     color: #FFFFFF;
+}
+
+#nextBtn:hover {
+    background-color: #755CDE;
+    cursor: pointer;
+}
+
+#nextBtn:active {
+    background-color: #030303;
+    outline: 2px solid #755CDE;
+    outline-offset: 2px;
+    cursor: pointer;
 }
 
 .reservation {
@@ -318,6 +369,17 @@ body {
     line-height: 1.5;
     letter-spacing: 0px;
     color: #FFF7F0;
+}
+
+.reservation > button:hover {
+    background-color: #F6A560;
+   cursor: pointer;
+}
+
+.reservation > button:active {
+    background-color: #E16B5B;
     cursor: pointer;
+    outline: 2px solid #E16B5B;
+    outline-offset: 2px;
 }
 
