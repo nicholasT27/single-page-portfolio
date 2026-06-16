@@ -3,91 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Single-page design portfolio">
-    <title>Single Page design portfolio</title>
+    <meta name="description" content="Amy's design portfolio — graphic design, UI/UX, apps, photography, illustrations, and motion graphics.">
+    <title>Amy — Design Portfolio</title>
     <link rel="icon" type="image/x-icon" href="./image/favicon-32x32.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <section class="introduction-section">
-        <header class="logo">
-            <img src="./image/logo.svg" alt="logo" aria-hidden="true" />
-            <button>Free consultation</button>
+
+    <!-- =====================
+         HERO / INTRODUCTION
+    ====================== -->
+    <section class="hero">
+
+        <!-- Top navigation bar -->
+        <header class="nav-bar">
+            <img src="./image/logo.svg" alt="Amy Design logo" />
+            <button class="btn btn--dark">Free consultation</button>
         </header>
-        <section class="title">
-            <section class="title-details">
+
+        <!-- Page headline and tagline -->
+        <div class="hero__headline">
+            <div class="hero__headline-inner">
                 <h1>Design solutions made easy</h1>
-                <p>With over ten years of experience in various design disciplines, I’m your one-stop shop for your design needs.</p>
-            </section>
-        </section>
-        <section class="hero-description">
-            <div class="grid-1">
-                <img src="./image/pattern-graphic-design.svg" alt="graphic design logo" aria-hidden="true" />
+                <p>With over ten years of experience in various design disciplines, I'm your one-stop shop for your design needs.</p>
+            </div>
+        </div>
+
+        <!-- Service cards grid -->
+        <!-- Each card shows a discipline with a background colour and icon -->
+        <div class="services-grid">
+            <div class="services-grid__card services-grid__card--graphic-design">
+                <img src="./image/pattern-graphic-design.svg" alt="" aria-hidden="true" />
                 <p>Graphic Design</p>
             </div>
-            <div class="grid-2">
-                <img src="./image/pattern-ui-ux.svg" alt="ui-ux logo" aria-hidden="true"/>
+            <div class="services-grid__card services-grid__card--ui-ux">
+                <img src="./image/pattern-ui-ux.svg" alt="" aria-hidden="true" />
                 <p>UI/UX</p>
             </div>
-            <div class="grid-3">
-                <img src="./image/pattern-apps.svg" alt="apps logo" aria-hidden="true"/>
+            <div class="services-grid__card services-grid__card--apps">
+                <img src="./image/pattern-apps.svg" alt="" aria-hidden="true" />
                 <p>Apps</p>
             </div>
-            <div class="grid-4">
-                <img src="./image/pattern-photography.svg" alt="photography logo" aria-hidden="true"/>
+            <div class="services-grid__card services-grid__card--photography">
+                <img src="./image/pattern-photography.svg" alt="" aria-hidden="true" />
                 <p>Photography</p>
             </div>
-            <div class="grid-5">
-                <img src="./image/pattern-illustrations.svg" alt="illustrations logo" aria-hidden="true"/>
+            <div class="services-grid__card services-grid__card--illustrations">
+                <img src="./image/pattern-illustrations.svg" alt="" aria-hidden="true" />
                 <p>Illustrations</p>
             </div>
-            <div class="grid-6">
-                <img src="./image/pattern-motion-graphics.svg" alt="motion graphics logo" aria-hidden="true"/>
+            <div class="services-grid__card services-grid__card--motion-graphics">
+                <img src="./image/pattern-motion-graphics.svg" alt="" aria-hidden="true" />
                 <p>Motion Graphics</p>
             </div>
-        </section>
-        <section class="introduction">
-            <div class="profile-image">
-                <img src="./image/image-amy.webp" alt="amy image" aria-hidden="true"/>
+        </div>
+
+        <!-- About / bio section -->
+        <div class="about">
+            <div class="about__photo">
+                <!-- alt text describes Amy since this is meaningful content, not decorative -->
+                <img src="./image/image-amy.webp" alt="Amy, a designer with over 10 years of experience" />
             </div>
-            <div class="profile-introduction">
-                <h1>I’m Amy, and I’d love to work on your next project</h1>
-                <p>I love working with others to create beautiful design solutions. I’ve designed everything from brand illustrations to complete mobile apps. I’m also handy with a camera!</p>
-                <button>Free Consultation</button>
+            <div class="about__text">
+                <h2>I'm Amy, and I'd love to work on your next project</h2>
+                <p>I love working with others to create beautiful design solutions. I've designed everything from brand illustrations to complete mobile apps. I'm also handy with a camera!</p>
+                <button class="btn btn--coral">Free Consultation</button>
             </div>
-        </section>
+        </div>
+
     </section>
-        <section class="work-slider-section">
-            <h1 class="slider-title">My work</h1>
-            <div class="slider-wrapper">
-                <div class="slider-track" id="sliderTrack">
-                    <div class="slide" id="slideLeft"></div>
-                    <div class="slide active" id="slideCenter"></div>
-                    <div class="slide" id="slideRight"></div>
-                </div>
-                <div>
-                    <div class="slider-controls">
-                        <button id="prevBtn"><img src="./image/icon-arrow-left.svg" aria-hidden="true" alt="arrow-left"/></button>
-                        <button id="nextBtn"><img src="./image/icon-arrow-right.svg" aria-hidden="true" alt="arrow-right"/></button>
-                    </div>
-                </div>
+
+    <!-- =====================
+         WORK SLIDER
+    ====================== -->
+    <section class="work-slider" aria-label="Portfolio work samples">
+        <h2 class="work-slider__title">My work</h2>
+        <div class="work-slider__wrapper">
+            <div class="work-slider__track" id="sliderTrack">
+                <!-- Three visible slide slots: previous, current (active), next -->
+                <div class="slide" id="slidePrev" aria-hidden="true"></div>
+                <div class="slide slide--active" id="slideCurrent"></div>
+                <div class="slide" id="slideNext" aria-hidden="true"></div>
             </div>
-        </section>
-    
-        <section class="reservation">
-            <div class="reservation-description">
-                <h1>Book a call with me</h1>
-                <p>I’d love to have a chat to see how I can help you. The best first step is for us to discuss your project during a free consultation. Then we can move forward from there.</p>
+
+            <!-- Prev / Next navigation -->
+            <div class="work-slider__controls">
+                <button class="slider-btn" id="prevBtn" aria-label="Previous slide">
+                    <img src="./image/icon-arrow-left.svg" alt="" aria-hidden="true" />
+                </button>
+                <button class="slider-btn" id="nextBtn" aria-label="Next slide">
+                    <img src="./image/icon-arrow-right.svg" alt="" aria-hidden="true" />
+                </button>
             </div>
-            <button>Free consultation</button>
-        </section>
-        <footer class="logo">
-            <img src="./image/logo.svg" alt="logo" aria-hidden="true" />
-            <button>Free consultation</button>
-        </footer>
-        <script src="index.js"></script>
+        </div>
+    </section>
+
+    <!-- =====================
+         BOOKING / CTA
+    ====================== -->
+    <section class="booking">
+        <div class="booking__text">
+            <h2>Book a call with me</h2>
+            <p>I'd love to have a chat to see how I can help you. The best first step is for us to discuss your project during a free consultation. Then we can move forward from there.</p>
+        </div>
+        <button class="btn btn--coral">Free consultation</button>
+    </section>
+
+    <!-- =====================
+         FOOTER
+    ====================== -->
+    <footer class="nav-bar">
+        <img src="./image/logo.svg" alt="Amy Design logo" />
+        <button class="btn btn--dark">Free consultation</button>
+    </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>
