@@ -6,12 +6,13 @@
 
 body {
     background-color: #FFF7F0;
-    padding: 32px;
     width: 100%;
     font-family: "Plus Jakarta Sans", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
+    padding: 64px 10px 64px
 }
 
 .introduction-section, footer, .reservation{
@@ -25,7 +26,7 @@ body {
 }
 
 .logo > button {
-    min-width: 234px;
+    width: 234px;
     border: none;
     border-radius: 100px;
     background-color: #030303;
@@ -97,7 +98,7 @@ body {
 .grid-2 {
     grid-column: span 1;
     grid-row: span 1;
-    background-color: #E9A282;
+    background-color: #F6A560;
 }
 
 /* Apps - small top middle */
@@ -116,7 +117,7 @@ body {
 .grid-5 {
   grid-column: 2 / 4;      /* spans column 2 and 3 */
   grid-row: 2 / 3;         /* place at row 2 */
-  background-color: #C1614F;
+  background-color: #E16B5B;
 }
 
 .grid-6 {
@@ -208,6 +209,10 @@ body {
     cursor: pointer;
 }
 
+.work-slider-section {
+    width: 100%;
+}
+
 .work-slider-section > h1 {
     color: #030303;
     text-align: center;
@@ -222,17 +227,19 @@ body {
 }
 
 .slider-wrapper {
-    width: 100vw;
+    width: 100%;
+    overflow: hidden;
 }
 
 .slider-track {
     display: flex;
-    padding: 48px 0px;
+    justify-content: center;
+    gap: 20px;
+    margin: 48px 0;
 }
 
 .slide {
-    flex: 1;           /* ✅ each slot takes equal width (33.333%) */
-    padding: 0 8px;    /* ✅ gap between slides — increase for more gap */
+    flex-shrink: 0;
 }
 
 .slide img {
@@ -273,6 +280,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 10px;
+    padding: 5px;
 }
 
 #prevBtn {
@@ -381,5 +389,175 @@ body {
     cursor: pointer;
     outline: 2px solid #E16B5B;
     outline-offset: 2px;
+}
+
+/* Tablet - 768px */
+@media (max-width: 768px) {
+    .hero-description {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .hero-description > div {
+        min-height: 182px; /* restore the original row height */
+    }
+
+    .grid-1 {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3; 
+    }
+
+    .grid-2 {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+    }
+
+    .grid-3 {
+        grid-column: 4 / 5;
+        grid-row: 1 / 2; /* hidden, fits under grid-2 */
+        display: none; /* Apps card is hidden in picture 2 */
+    }
+
+    .grid-4 {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+    }
+
+    .grid-5 {
+        grid-column: 3 / 5;
+        grid-row: 2 / 3;
+    }
+
+    .grid-6 {
+        grid-column: 3 / 5;
+        grid-row: 3 / 4;
+    }
+
+    .introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 300px 0px;
+    gap: 50px;
+}
+
+    .profile-introduction{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .reservation {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        padding: 30px;
+    }
+}
+
+/* Phone - 375px */
+@media (max-width: 375px) {
+
+    .logo > img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .logo > button {
+        width: 200px;
+    }
+    
+    .title-details > h1 {
+        font-size: 40px;
+        line-height: 1.2;
+        letter-spacing: 0px;
+    }
+
+    .hero-description {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .hero-description > div {
+        min-height: 182px; /* restore the original row height */
+    }
+
+    .grid-1 {
+        grid-column: 1 / 3; /* full width */
+        grid-row: 1 / 2;
+    }
+
+    .grid-2 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        display: block;
+    }
+
+    .grid-3 {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        display: block;
+    }
+
+    .grid-4 {
+        grid-column: 1 / 3;
+        grid-row: 4 / 5;
+    }
+
+    .grid-5 {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+    }
+
+    .grid-6 {
+        grid-column: 1 / 3;
+        grid-row: 5 / 6;
+    }
+
+    .introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 300px 0px;
+    gap: 50px;
+}
+
+    .profile-introduction{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .profile-image > img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .reservation {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        padding: 20px;
+    }
+
+    .reservation-description > h1 {
+        font-size: 40px;
+        line-height: 1.2;
+        letter-spacing: 0;
+    }
+
+    .reservation-description > p {
+        font-size: 18px;
+    }
+
+    .slide > img {
+        height: 180px;
+    }
 }
 
